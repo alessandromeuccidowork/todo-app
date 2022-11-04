@@ -1,0 +1,29 @@
+@use '../abstract/index' as i;
+
+button {
+    background-color: transparent;
+    font-family: i.$font-fam;
+    border: none;
+    padding: 0.3rem;
+}
+
+
+button {
+    transition: all 300ms;
+}
+
+button:hover {
+    color: i.$hover-grayish-blue;
+}
+
+.left-flex {
+    @include i.divFlex(flex, row, space-between);
+    width: 100%;
+}
+
+.btn-flex {
+    @include i.divFlex(flex, row, center);
+    gap: 2rem;
+    padding: 1rem 0;
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>| Todo app |</title>
+
+  <!-- CSS + SCSS -->
+  <link rel="stylesheet" href="styles/css/app.css">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+<body class="dark-mode">
+  <!-- background -->
+  <!-- <figure class="bg-img-wrapper">
+    <img class="bg-img" src="./images/purple-blue-gradient.jpg" alt="">
+    <img class="bg-img" src="./images/bg-desktop-light.jpg" alt="">
+  </figure> -->
+
+
+
+  <!-- TITLE -->
+  <header class="header-wrapper">
+    <section class="header-flex">
+      <h1 class="title">Todo</h1>
+      <div id="toggle-mode">
+        <img id="sun-svg" class="toggle" src="./images/icon-sun.svg" alt="">
+        <!-- <img id="moon-svg" class="toggle" src="./images/icon-moon.svg" alt=""> -->
+      </div>
+    </section>
+  </header>
+
+
+
+
+  <!-- ITEMS SECTION -->
+  <main>
+    <!-- add tasks -->
+    <div class="add-items">
+      
+        <label for="new-task"></label>
+        <input type="checkbox" id="btn-add">
+        <input id="new-task" type="text" placeholder="Create a new task...">
+      
+    </div>
+
+ 
+    <!-- all tasks -->
+    <section class="tasks">
+
+     
+        <!-- incompleted-tasks -->
+        <div class="incomplete-wrapper ul">
+          <h3>Active</h3>
+            <ul id="incomplete-list">
+
+              <!-- Ignore it will delete -->
+              <li class="incomplete-task">
+                <input type="checkbox">
+                <label>li</label>
+                <input type="text">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+              </li>
+            </ul>
+          </div>
+
+
+     
+
+
+
+      <!-- completed tasks -->
+      <div class="completed-wrapper ul">
+        <h3>Completed</h3>
+        <ul id="completed-list">
+
+          <!-- Ignore it will delete -->
+          <li class="completed-task">
+            <input type="checkbox">
+            <label>li</label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <!-- tasks left -->
+      <div class="tasks-left">
+        <div class="left-flex">
+          <p id="todo-left"><!-- Add dynamic number --></p>
+
+          <!-- clear all tasks -->
+          <button id="btn-clear">
+            Clear Completed
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- BUTTON SECTION -->
+    <section class="btn-wrapper">  
+      <div class="btn-flex">
+        <button id="btn-all">
+          All
+        </button>
+        <button id="btn-active">
+          Active 
+        </button>
+        <button id="btn-completed">
+          Completed
+        </button>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- DRAG AND DROP SECTION -->
+  <!-- <footer class="footer-wrapper">
+    <p>Drag and drop to reorder list</p>
+  </footer> -->
+
+
+
+  <script type="module" src="src/app.js"></script>
+
+</body>
+</html>

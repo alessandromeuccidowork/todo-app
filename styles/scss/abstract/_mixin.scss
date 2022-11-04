@@ -1,0 +1,24 @@
+@use './index' as i;
+
+@mixin divFlex($display, $direction, $justify) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin itemsProperty {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(235, 19%, 35%);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+@mixin transitionB {
+    transition: background-image 2s;
+}
+
+// Dark Mode
+@mixin bodyDarkMode {
+    background-image: url(../../images/purple-blue-gradient.jpg);
+    transition: background-image 1s;
+}

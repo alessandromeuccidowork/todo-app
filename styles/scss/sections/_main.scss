@@ -1,0 +1,97 @@
+@use '../abstract/index' as i;
+
+main {
+    @include i.divFlex(flex, column, none);
+    gap: 1rem;
+    margin: auto;
+    padding: i.$xp-2;
+    max-width: 50rem;
+    backdrop-filter: blur(5px);
+}
+
+h3 {
+    padding: 1rem 1rem 0 1rem;
+    margin: 0;
+    border-bottom: solid 2px;
+}
+
+h3, label[for='new-task'] {
+    font-weight: i.$ft-700;
+    text-transform: uppercase;
+}
+
+.add-items, .tasks, .btn-flex {
+    @include i.itemsProperty;
+}
+
+.tasks-left {
+    @include i.divFlex(flex, row, none);
+    align-items: baseline;
+    
+    p {
+        margin: 0;
+    }
+}
+
+input[type=text] {
+    padding: 0.5rem;
+    width: 30%;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+
+ul {
+    font-family: i.$font-fam;
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-bottom: solid 1px i.$v-lt-grayish-blue;
+
+        input[type=text] {
+            display: none;
+        }
+    }
+}
+
+
+
+// add task
+.add-items {
+
+    label {
+        display: none;
+    }
+}
+
+
+
+
+// completed tasks
+#completed-list {
+
+    label {
+        text-decoration: line-through;
+        color: #888;
+    }
+}
+
+
+
+
+// edit tasks
+li.editMode {
+
+    input[type=text] {
+        display:inline-block;
+        transition: all 4s;
+    }
+
+    label {
+        display:none;
+        transition: all 2s;
+    }
+}
+

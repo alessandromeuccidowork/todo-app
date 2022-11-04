@@ -1,0 +1,31 @@
+@use './abstract/index' as i;
+
+@use './components/buttons';
+@use './components/checkbox';
+
+@use './sections/header';
+@use './sections/main';
+@use './sections/footer';
+
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: i.$font-sz;  
+    background-color: i.$v-lt-grayish-blue;
+    background-image: url(../../images/vivid-blurred-colorful-wallpaper-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 100%;
+    transition: background-image 2s;
+}
+
+.dark-mode {
+    @include i.bodyDarkMode;
+}
+
+.invisible {
+    display: none;
+}
+

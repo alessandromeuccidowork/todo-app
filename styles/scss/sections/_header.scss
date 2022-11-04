@@ -1,0 +1,19 @@
+@use '../abstract/index' as i;
+
+
+.header-wrapper {
+    padding: 2.5rem 5rem;
+}
+
+.header-flex {
+    @include i.divFlex(flex, row, space-between);
+    align-items: baseline;
+}
+
+.title {
+    color: i.$v-lt-gray;
+    margin: 0;
+    // padding: 0 5rem;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+}

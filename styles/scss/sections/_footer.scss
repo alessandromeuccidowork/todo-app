@@ -1,0 +1,8 @@
+@use '../abstract/index' as i;
+
+footer {
+    color: i.$v-lt-gray;
+    position: relative;
+    text-align: center;
+    padding: i.$yp-2;
+}
