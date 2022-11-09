@@ -207,6 +207,8 @@ body {
 
 .dark-mode {
   background-image: url(../../images/purple-blue-gradient.jpg);
+  height: 100vh;
+  width: 100%;
   transition: background-image 1s;
 }
 
