@@ -15,8 +15,10 @@ body {
     background-color: i.$v-lt-grayish-blue;
     background-image: url(../../images/vivid-blurred-colorful-wallpaper-background.jpg);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
+    height: 100vh;
     width: 100%;
     transition: background-image 2s;
 }
